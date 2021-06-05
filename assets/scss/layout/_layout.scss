@@ -1,0 +1,9 @@
+.l-content-body{
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 10px;
+  @include sp-screen{
+    width: 100%;
+    // padding: 0 10;
+  }
+}

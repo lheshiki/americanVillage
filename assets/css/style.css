@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* ------------------Foundations-------------------------- */
+html {
+  /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%;
+}
+
+body {
+  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
+  font-size: 1.6em;
+}
+
+div h2 {
+  /* 68px */
+  font-size: 6.8rem;
+}
+
+div a {
+  /* 16px */
+  font-size: 1.6rem;
+}
+
+.l-content-body {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .l-content-body {
+    width: 100%;
+  }
+}
+
+.c-topKv__wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.c-topKv__img {
+  width: 100%;
+}
+
+.c-topKv__logo {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+.c-topKv__text {
+  position: absolute;
+  bottom: -48px;
+  right: -59px;
+}
+/*# sourceMappingURL=style.css.map */
