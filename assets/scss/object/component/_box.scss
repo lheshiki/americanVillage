@@ -1,0 +1,63 @@
+@import '../../settings/variables';
+
+.c-box{
+  width: calc((100% - 50px)/3);
+  height: 402px;
+  position: relative;
+  
+  &:not(:nth-child(3n+3)){
+    margin-right: 25px;
+  }
+
+  // &:nth-child(3n+3){
+  // }
+
+  &__img{
+    max-width: 100%;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__date{
+    display: block;
+    font-size: $base_font_size_pc;
+    padding: 10px;
+  }
+
+  &__text{
+    font-size: $base_font_size_pc;
+    padding:0 10px;
+  }
+
+  &__button{
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+
+    span{
+      position: relative;
+
+      &::after{
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      top: 25px;
+      left: 0;
+      transform: scale(0.2, 1);
+      transform-origin: right top;
+      transition: transform .3s;
+      }
+
+      &:hover::after{
+        transform: scale(1, 1);
+       }
+    }
+  }
+}

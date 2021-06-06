@@ -1,11 +1,19 @@
 .c-topKv{
   &__wrapper{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__content{
     position: relative;
   }
 
   &__img{
-    width: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   &__logo{
@@ -16,11 +24,11 @@
 
   &__text{
     position: absolute;
-    bottom: -48px;
+    bottom: -52px;
     right: -59px;
   }
 
   &__description {
-
+    font-size: 2.4rem;
   }
 }
