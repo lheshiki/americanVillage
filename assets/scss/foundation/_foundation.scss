@@ -17,3 +17,12 @@ div a{
 /* 16px */
 font-size: 1.6rem;
 }
+
+a{
+  display: block;
+}
+
+a:hover{
+  box-shadow: 0 0 3px 3px rgba($color: #000000, $alpha: 0.5);
+  cursor: pointer;
+}
