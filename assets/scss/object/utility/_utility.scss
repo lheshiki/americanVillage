@@ -1,3 +1,23 @@
 .u-mt-30{
   margin-top: 60px;
 }
+
+.sp-hide{
+  @include pc-screen{
+    display: block;
+  }
+
+  @include sp-screen{
+    display: none;
+  }
+}
+
+.pc-hide{
+  @include pc-screen{
+    display: none;
+  }
+
+  @include sp-screen{
+    display: block;
+  }
+}

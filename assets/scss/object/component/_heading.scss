@@ -6,4 +6,8 @@
   margin-top: 40px;
   font-family: $font_en;
   font-weight: 900;
+
+  @include sp-screen{
+    font-size: 3rem;
+  }
 }

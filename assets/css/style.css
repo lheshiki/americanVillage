@@ -31,19 +31,22 @@ a:hover {
 }
 
 .l-content {
-  max-width: 1150px;
+  max-width: 1152px;
   margin: 0 auto;
+  padding: 0 4%;
 }
 
 @media screen and (max-width: 750px) {
   .l-content {
     width: 100%;
+    padding: 0;
   }
 }
 
 .l-content-body {
-  max-width: 1024px;
+  max-width: 1152px;
   margin: 0 auto 100px;
+  padding: 0 4%;
 }
 
 @media screen and (max-width: 750px) {
@@ -56,12 +59,6 @@ a:hover {
 .c-topKv__wrapper {
   width: 100%;
   max-width: 1152px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 40px;
   position: relative;
 }
@@ -73,19 +70,53 @@ a:hover {
 }
 
 .c-topKv__logo {
+  width: 23.6%;
   position: absolute;
-  top: -24%;
-  left: -10px;
+  top: -17%;
+  left: -4%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 750px) {
+  .c-topKv__logo {
+    width: 29%;
+    margin: 0 auto 5%;
+    position: initial;
+  }
+}
+
+.c-topKv__logo img {
+  width: 100%;
 }
 
 .c-topKv__text {
+  width: 48%;
   position: absolute;
-  bottom: -49px;
-  right: 0;
+  bottom: -9.5%;
+  right: -6%;
+}
+
+@media screen and (max-width: 750px) {
+  .c-topKv__text {
+    width: 55%;
+    top: 45%;
+    left: 5%;
+  }
+}
+
+.c-topKv__text img {
+  width: 100%;
 }
 
 .c-topKv__description {
   font-size: 2.4rem;
+}
+
+@media screen and (max-width: 750px) {
+  .c-topKv__description {
+    font-size: 4.2vw;
+    text-align: center;
+  }
 }
 
 .c-heading {
@@ -96,8 +127,13 @@ a:hover {
   font-weight: 900;
 }
 
+@media screen and (max-width: 750px) {
+  .c-heading {
+    font-size: 3rem;
+  }
+}
+
 .c-container {
-  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +145,7 @@ a:hover {
   width: calc((100% - 50px)/3);
   height: 402px;
   position: relative;
+  margin-top: 35px;
 }
 
 @media screen and (max-width: 750px) {
@@ -202,23 +239,44 @@ a:hover {
           transform: scale(1, 1);
 }
 
-.c-nav {
-  width: 100%;
-  height: 125px;
-  line-height: 7.5;
+.menu-gmenu-container {
+  height: 70px;
 }
 
-.c-nav__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+@media screen and (max-width: 750px) {
+  .menu-gmenu-container {
+    position: relative;
+    height: 0;
+  }
 }
 
-.c-nav__item {
-  margin-left: 3%;
+@media screen and (min-width: 751px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .menu {
+    width: 100%;
+    display: none;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 33vw;
+    z-index: 2;
+    background-color: #fff;
+    padding-bottom: 10px;
+  }
+}
+
+.menu-item {
+  padding: 10px;
 }
 
 .c-footer__wrapper {
@@ -234,7 +292,90 @@ a:hover {
   color: #fff;
 }
 
+.c-hamburger, .c-hamburger-on {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .c-hamburger, .c-hamburger-on {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    height: 32px;
+    z-index: 3;
+  }
+}
+
+.c-hamburger__line, .c-hamburger__line::before, .c-hamburger__line::after {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: #000;
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.c-hamburger__line::before, .c-hamburger__line::after {
+  content: '';
+  position: absolute;
+}
+
+.c-hamburger__line::before {
+  top: 10px;
+}
+
+.c-hamburger__line::after {
+  top: 20px;
+}
+
+.c-hamburger-on__line {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.c-hamburger-on__line::before {
+  background-color: transparent;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.c-hamburger-on__line::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  top: 1px;
+}
+
 .u-mt-30 {
   margin-top: 60px;
+}
+
+@media screen and (min-width: 751px) {
+  .sp-hide {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .sp-hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  .pc-hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .pc-hide {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

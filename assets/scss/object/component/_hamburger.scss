@@ -1,0 +1,56 @@
+.c-hamburger{
+  display: none;
+
+  @include sp-screen{
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    height: 32px;
+    z-index: 3;
+  }
+
+  &__line , &__line::before, &__line::after{
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    transition: all 1s;
+  }
+
+  &__line::before, &__line::after{
+    content: '';
+    position: absolute;
+  }
+
+  &__line::before{
+    top: 10px;
+  }
+
+  &__line::after{
+    top: 20px;
+  }
+}
+
+// hamburgerのアニメーション
+.c-hamburger-on{
+  @extend .c-hamburger;
+  // transition: all 1s;
+  
+  &__line{
+    transform: rotate(45deg);
+    transition: all 1s;
+  }
+
+  &__line::before{
+    background-color: transparent;
+    transition: all 1s;
+  }
+
+  &__line::after{
+    transform: rotate(-90deg);
+    transition: all 1s;
+    top: 1px;
+  }
+}

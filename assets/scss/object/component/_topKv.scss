@@ -2,14 +2,8 @@
   &__wrapper{
     width: 100%;
     max-width: 1152px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 40px;
     position: relative;
-  }
-
-  &__content{
-    // position: relative;
   }
 
   &__img{
@@ -19,18 +13,46 @@
   }
 
   &__logo{
+    width: 23.6%;
     position: absolute;
-    top: -24%;
-    left: -10px;
+    top: -17%;
+    left: -4%;
+    z-index: 1;
+
+    @include sp-screen{
+      width: 29%;
+      margin: 0 auto 5%;
+      position: initial;
+    }
+
+    img{
+      width: 100%;
+    }
   }
 
   &__text{
+    width: 48%;
     position: absolute;
-    bottom: -49px;
-    right: 0;
+    bottom: -9.5%;
+    right: -6%;
+
+    @include sp-screen{
+      width: 55%;
+      top: 45%;
+      left: 5%;
+    }
+
+    img{
+      width: 100%;
+    }
   }
 
   &__description {
     font-size: 2.4rem;
+
+    @include sp-screen{
+      font-size: 4.2vw;
+      text-align: center;
+    }
   }
 }

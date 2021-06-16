@@ -10,6 +10,9 @@
 <body <?php body_class(); ?> >
 <header>
   <div class="l-content">
+    <div class="c-hamburger">
+      <span class="c-hamburger__line"></span>
+    </div>
     <?php wp_nav_menu();?>
   </div>
 </header>
